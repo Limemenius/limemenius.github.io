@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel = "icon" type = "image/png" href = "image/icon.png">
+    <!-- For apple devices -->
+<link rel = "apple-touch-icon" type = "image/png" href = "/icon.png"/>
+<style>
+#myDIV {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: #68A691;
+  margin-top: 20px;
+}
+
+.font01{
+	margin-top: 0px;
+}
+
+/* fonts                       */
+
+body{
+
+  background: black;
+}
+
+#head01{
+	margin-top: 0px;
+	padding-top: 20px;
+	width: 100%;
+	min-height: 80px;
+	text-align: center;
+	background-color: #32CD32;
+}
+#head01 h1{
+  color: #50514F;
+}
+#face01{
+	width: 1020px;
+	min-height: 800px;
+	color:#f83e3e;
+	text-align: center;
+	border-style: solid;
+	border-color:#B4ADEA;
+	margin: auto;
+	padding-top: 0px;
+	background-color: none;
+}
+nav{
+  z-index: 1100;
+  position: sticky;
+	top: 0;
+	width: 1020px;
+	height: 55px;
+  background: rgb(0,0,0,0.4);
+	
+}
+.navig01{
+	margin: 2px;
+	float: left;
+	height: 20px;
+	width: 200px;
+	transition-duration: 0.4s;
+  cursor: pointer;
+	background: rgb(50,205,50);
+	opacity: 0.3;
+	color: rgb(50,205,50,1);
+}
+.navig01 h1{
+	padding-top: 0px;
+}
+.navig01:hover{
+	float: left;
+	height: 50px;
+	width: 200px;
+	background-color:rgb(50,205,50,1);
+	color: #FFF;
+	opacity: 1;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+  background-color: rgb(50,205,50);
+  margin: 2px 3px 0px 0px;
+  
+}
+.dropdown .dropbtn {
+  cursor: pointer;
+  font-size: 18px;
+  height: auto;
+	width: 200px;
+  border: none;
+  outline: none;
+  color: #594F4A;
+  font-size: 23px;
+  padding:15px 0px 8px 0px;
+  background-color: inherit;
+  font-family: inherit;
+  margin:0px;
+  color: black;
+  transition-delay: 7ms;
+}
+.dropdown h1{
+  margin: 0px;
+  
+  }
+.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+  background-color: rgb(50,205,50,0.5);
+  color: white;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 200px;
+  z-index: 1;
+  margin: 2px;
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 2px 20px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  background-color: black;
+  color: rgb(50,205,50,0.5);
+}
+.dropdown-content a:hover {
+  background-color: white;
+  color: black;
+}
+.show {
+  display: block;
+} 
+
+#clicked{
+	margin: 2px;
+	float: left;
+	height: 50px;
+	width: 200px;
+	background-color:#F2F6F7;
+	color: #FDFFF7;
+	opacity: 1;
+  }
+  
+.upload01{
+	padding: 32px 10px 10px 10px;
+	color: black;
+}
+
+#welcome{
+    color: #50514F;
+  padding:50px;
+  height: 550px;
+  background: rgb(50,205,50,1);
+  }
+  
+#orb01{
+    transform: rotate(0deg);
+    padding: 40px;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    left: 600px;
+    top: 200px;
+    width: 240px;
+    height: 240px;
+    background-image: url("img/orb01.png");
+    background-size: contain; 
+    background-repeat: no-repeat;
+    animation-name: updown-orb;
+    animation-iteration-count: infinite;
+    animation-duration: 3.5s;
+    animation-delay: 0.1s;
+  }
+  #orb01 a{
+    letter-spacing: 5px;
+  }
+  
+#handmove-top{
+  transform: rotate(110deg);
+  position: absolute;
+  left: 500px;
+  top: 60px;
+  margin: auto;
+  width: 300px;
+  height: 300px;
+  background-image: url("img/hand01.png");
+  animation-name: updown-top;
+  animation-iteration-count: infinite;
+  animation-duration: 3.5s;
+  animation-delay: 0s;
+}
+#handmove-topback{
+  transform: rotate(110deg);
+  position: absolute;
+  left: 500px;
+  top: 60px;
+  margin: auto;
+  width: 300px;
+  height: 300px;
+  background-image: url("img/hand02.png");
+  animation-name: updown-top;
+  animation-iteration-count: infinite;
+  animation-duration: 3.5s;
+  animation-delay: 0s;
+}
+  #handmove-bottom{
+  transform: rotate(-30deg);
+  position: absolute;
+  left: 680px;
+  top: 420px;
+  margin: auto;
+  width: 300px;
+  height: 300px;
+  background-image: url("img/hand01.png");
+  animation-name: updown-bottom;
+  animation-iteration-count: infinite;
+  animation-duration: 3.5s;
+  animation-delay: 0.2s;
+}
+#handmove-bottomback{
+  transform: rotate(-30deg);
+  position: absolute;
+  left: 680px;
+  top: 420px;
+  margin: auto;
+  width: 300px;
+  height: 300px;
+  background-image: url("img/hand02.png");
+  animation-name: updown-bottom;
+  animation-iteration-count: infinite;
+  animation-duration: 3.5s;
+  animation-delay: 0.2s;
+}
+
+
+
+
+footer{
+    background-color: #f83e3e;
+    height: auto;
+    margin: auto;
+    width: 80%;
+    position: absolute;
+    bottom: 0px;
+}
+  @keyframes updown-orb{
+  75%  {top: 195px; transform: rotate(-2deg);}
+}
+@keyframes updown-top{
+  75%  {top: 50px; transform: rotate(106deg);}
+}
+@keyframes updown-bottom{
+  75%  {top: 410px;transform: rotate(-28deg);}
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="face01">
+	
+		<nav>
+		  <div class="dropdown">
+
+        <button  class="dropbtn" onclick="myFunction()">&#11167; HOME &#11167;
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="#">&#11090;  &#11090;</a>
+          <a href="#">&#11090;  &#11090;</a>
+          <a href="#">&#11090;  &#11090;</a>
+          <a href="#">&#11090;  &#11090;</a>
+        </div>
+      </div>
+			<a href="#"><div class="navig01"><h1>ABOUT ME</h1></div></a>
+			<a href="#"><div class="navig01"><h1>ARCHIVE</h1></div></a>
+			<a href="#"><div class="navig01"><h1>HEROES</h1></div></a>
+			<a href="#"><div class="navig01"><h1>MORE</h1></div></a>
+		</nav>
+	  <section id="welcome">
+        <div id="handmove-topback"></div>
+        <div id="handmove-bottomback"></div>
+        <div id="orb01">
+            <br><br><br>
+            <h1>Hello traveler!</h1>
+            <p>My name is <br><a href="#">Lememenius</a><br>and welcome in my tower!</p>
+          </div>
+	    <div id="handmove-top"></div>
+        <div id="handmove-bottom"></div>
+			
+		</section>
+	</div>
+    <footer>
+        <p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
+    </footer>
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+	</script>
+</body>
+</html>
